@@ -1,0 +1,13 @@
+<body>
+    <!-- Rest of markup -->
+
+      <script src="https://cdn.socket.io/4.1.3/socket.io.min.js"></script>
+      <script>
+        const socket = io()
+        socket.on('teste', (data) => {
+          console.log(data)
+          socket.emit('my other event', { my: 'data' })
+        })
+      </script>
+  </body>
+  </html>
